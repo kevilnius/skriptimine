@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# muljeskript
+echo -n "Kevin Sakeus " # väljasta ilma reavahetuseta Kevin Sakeus
+echo ""
+echo -n "ISP218"       # väljasta ISP218 ja tee reavahetus
+echo  ""
+echo -n "Huvitav"     # väljasta Huvitav ja tee reavahetus
+echo ""
+echo -n "Praegune mulje on hea olen teada saanud uusi commande" # väljasta Praegune mulje on hea olen teada saanud uusi commande ja tee reavahetus
+echo ""
+#
+# skripti lõpp
+
