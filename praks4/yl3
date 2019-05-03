@@ -1,0 +1,13 @@
+#!/bin/bash
+# Bussiekkskursiooni abistaja
+# vaja on teada reisijate arvu ja kohti bussis
+echo -n "Mitu resisijat on ekskursioonile tulemas nimekirja alusel: "; read reisijad
+echo -n "Mitu istekohta on bussis: "; read bussid
+#mitu bussi oleks vaja
+busside_arv=`expr $reisijad / $bussid`
+
+#mitu inimest maha jääb
+maha_jaab=`expr $reisijad % $bussid`
+echo "Täielikult täidetakse $busside_arv bussi ja maha jääb $maha_jaab reisijat"
+#
+#skriptimise lõpp
