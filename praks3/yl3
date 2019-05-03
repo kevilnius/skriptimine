@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# näitab kui kaua on virtuaalne masin tööl olnud
+#
+echo "Arvuti `hostname` on töödanud `uptime -p | cut -f2 -d "," | cut -f2 -d " "` minutit!"
+
+echo "Arvuti `hostname` on töödanud `uptime -p | cut -f2 -d " "` tund ja `uptime -p | cut -f4 -d " "` minutit!"
+#
+# hostname väljastab virtuaalmasina nime  järel tuleb -p
+# väljastab masina töötamise aja
+# cut lõikab välja tunnid ja minutid
+#
+# skripti lõpp
