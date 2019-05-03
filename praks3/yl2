@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+#otsib .logi lõpuga seotud faile
+find /var/* -name '*.log' 2>/dev/null -exec wc -l '{}'  \; | sort
+#
+# skripti lõpp
