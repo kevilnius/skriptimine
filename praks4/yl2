@@ -1,0 +1,31 @@
+#!/bin/sh
+# skript mis aitaks kokkainimestel valmistada küpsisetorti lihtsamalt
+# vaja on teada saada aluskandiku pikkust ja laiust sentimeetrites
+#  kui on vajalik informatsioon teada alustatakse
+echo -n "Palun sisestage aluskandiku pikkus (cm): "; read pikkus
+echo -n "Palun sisestage aluskandiku laius (cm): "; read laius
+# Vaja on teada saada küpsise suurust mitu küpsist on pakis ja kihtide arvu
+echo -n "Sisestage küpsise suurus (cm): "; read kypsis
+echo -n "Mitu küpsist on ühes pakis: "; read pakk
+echo -n "Mitu kihti on tordil: "; read kihid
+# Tuleb sooritada arvutused 
+#kandiku pindala
+pindala=`expr $pikkus \* $laius`
+# Vaja arvutada mitu küpsist on vaja tordi jaoks
+vaja=`expr $pindala / $kypsis`
+# oleks vaja teada mitu kihti läheb tordile 
+kogukypsis=`expr $vaja \* $kihid`
+# arvutada tuleb nüüd pakkide koguse mida on vaja tordi jaoks
+pakid=`expr $kogukypsis / $vaja`
+# ülejäägi arvutamine
+ylej22k=`expr $kogukypsis % $pakk`
+# kui ülejääk peaks olema väiksem kui 1, ei kuvata seda
+if [ $ylej22k -lt 1 ] 
+then
+       echo "Teil on vaja $pakid pakk(i) küpsiseid "
+else
+# kui jääk peaks olema suurem kui 1
+       echo "Teil on vaja $pakid pakk(i) küpsiseid ja $ylej22k küpsist "
+fi;
+#
+#skripti lõpp
