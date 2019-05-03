@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Joink
+#
+echo Today is  $(date +"%A,%B,%Y") # kUUPÄEV X PALJU MUUD TEISTKI
+echo Time is $(date +"%I:&M")    # Kell ja aeg üheskoos 
+echo ""
+cal
+#
+# skripti lõpp
