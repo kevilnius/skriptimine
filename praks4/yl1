@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Nime skript
+#
+echo -n " Tere! Mis on Teie nimemasin: "
+# eesnime ja perenime loetakse ja salvestatakse
+read eesnimi perenimi
+# 
+echo "Tere tulemast tagasi noorhärra, $eesnimi $perenimi!"
+#
+# skripti lõpp
