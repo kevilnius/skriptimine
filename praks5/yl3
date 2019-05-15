@@ -1,0 +1,18 @@
+#!/bin/bash
+# On tore atmosfäär
+echo "Esmaspäev - 1"
+echo "Teisipäev - 2"
+echo "Kolmapäev -3"
+echo "Neljapäev -4"
+echo "Reede - 5"
+echo "Laupäev - 6"
+echo "Pühapäev - 7"
+echo -n "Sisestage päev millal soovite lahkuda:"
+read reisi_algus
+echo -n "Sisestage reisi õõpäevade ar:"
+read paevad
+lisapaevad=$(($paevad%7))
+tagasi=$(($reisi_algus + $lisapaevad))
+echo "Tervist jõuate oma reisilt tagasi täpselt $tagasi-ndal päeval"
+#
+#skripti lõpp
