@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Sooviks kolmnurga külgi arvutada seega
+echo -n "Sisestage kolmnurga külg a: "
+read a
+echo -n "Sisestage kolmnurga külg b: "
+read b
+echo -n "Sisestage kolmnurga külg c: "
+read c
+# Masin hakkab nüüd toimetama et saada ümbermõõtu
+p=$(echo "($a + $b + $c) / 2" | bc)
+# Toimuvad arvutused ümbermõõduga
+S1=$(echo "$p * ($p - $a) * ($p - $b) * ($p - $c)" | bc)
+# jah
+S2=$(echo "scale=2;sqrt($S1)" | bc)
+# Masin nüüd väljastab soovitud tulemuse
+echo -n "Pindala on = $S2"
+#
+#skripti lõpp
