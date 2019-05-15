@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#Soovime teha hüpotenuusi ül seega
+#
+echo -n "Sisestage vajaliku kolmnurga külje a pikkus sentimeetrites (cm) "
+read a
+echo -n "Sisestage vajaliku kolmnurga külje b pikkus sentimeetrites (cm) "
+read b
+a1=`expr $a \* $a`
+b1=`expr $a \* $b`
+d=`expr $a1 \+ $b1`
+c=$(echo "$d" | awk '{print sqrt($1)}')
+echo -n "Hüpoteenuus on: $c"
+#
+#skripti lõpp
