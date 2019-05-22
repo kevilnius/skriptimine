@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Reisi korraldamiseks on vaja bussi ja inimeste arvu
+echo -n "Tervist! Sisestage täpne reisijate arv:"
+read arvuke
+echo -n "Tervist! Sisestage ka bussis olevate kohtade arv:"
+read kohad
+echo "Palun Oodake"
+sleep 2
+bussiarv=`expr $arvuke / $kohad`
+ulejaanud=`expr $bussiarv \* $kohad`
+ulejaanud2=`expr $arvuke - $ulejaanud1`
+if [ $ulejaanud2 -ne 0 ];
+then
+bussiarv=`expr $bussiarv + 1`
+fi
+echo "On vaja $bussiarv bussi"
+#
+#skripti lõpp
