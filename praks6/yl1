@@ -3,10 +3,12 @@
 #Soovite teada saada kas arv on paaris või ei seega peate sisestama vajalikud arvud
 echo -n "Tervist! Sisestage suvaline täisarvuke: "
 read arv
+#loeb arvu
 if [ $(($arv%2)) -eq 0 ];
 #Kui arv on paaris siis kuvab masin et see on paaris
 then
 echo "$arv on paarisarv"
+#kui arv ei ole paaris siis kuvab masin et arv on paaritu
 else
 echo "$arv on paarituarv"
 fi
