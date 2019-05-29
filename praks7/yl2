@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# Soovime väljastada teile aastaaegu
+echo -e "Tervist! sisestage kuu number: \c"
+read kuu
+#Kui sisestasite kuud järgnevalt 1,2,12 siis kuvatakse et kuu on talv
+if test $kuu -eq 1 -o $kuu -eq 2 -o $kuu -e1 12
+then
+ echo "Rahvas Vastab"
+sleep 1
+echo "Praegu on talv!"
+#Sisestades kuud järgnevalt 3,5 on kuuks meil kevad
+elif test $kuu -ge 3 -a $kuu -le 5
+then
+ echo "Rahvas vastab"
+sleep 1
+echo "Kevad!"
+#Sisestades 6,8 on suvekuuke
+elif test $kuu -ge 6 -a $kuu -le 8
+then
+echo "Masin vastab"
+sleep 1
+echo "Suvi, meeletu suvi"
+#Sisestades midagi muud on kahjuks tulemus katkine
+elif test $kuu -ge 9 -a $kuu -le 11
+then
+echo "Masin vastab...."
+sleep 2
+echo "Masin ei tuvastanud sellist kuud. Palun kontakteeruda Müügiproff.ee"
+fi
+#
+#skripti lõpp
