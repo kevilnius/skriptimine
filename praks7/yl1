@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#Kasutaja vanuse küsimine on huvitav teenus millega saab teada kasutaja vanust
+echo -n "Tervist! kaasmaalane sisestage oma vanus siia: "
+read vanus
+if test $vanus -gt 0 -a $vanus -lt 11
+then
+sleep 1
+echo "Tundub et olete alles lapse eas!"
+elif test $vanus -ge 11 -a $vanus -lt 18
+then
+sleep1
+echo "Tundub et olete nooruki eas!"
+elif test $vanus -ge 18 -a $vanus -lt 63
+then
+sleep 1
+echo "Tundub et olete juba noorhärra!"
+elif test $vanus -ge 63 -a $vanus -lt 118
+then
+sleep 1
+echo "Ahsa mait te olete ju senjööri!"
+else
+sleep 2
+echo "Nali naljaks kali kaljaks aga netitrollid neti.ee tagasi!"
+fi
+#
+#skripti lõpp
