@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#Kujundite väljastamine ekraanile
+#a shit here we go again
+echo "Tervist! Mitut rida soovite sisestada? "
+read ridadearv
+for (( j = 1; j <= $ridadearv; j++))
+do
+echo -n "$j."
+done
+echo -n "*"
+done
+echo ""
+done
