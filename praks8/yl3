@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+echo "Tervist! Sisestage üks kuu number: "
+read kuu
+case $kuu in
+"1") echo "See kuu paistab olevalt jaanuar";;
+"2") echo "See kuu paistab olevalt veebruar";;
+"3") echo "Tegemist on märtsi kuuga";;
+"4") echo "Tegemist on aprilli kuuga";;
+"5") echo "Kuu nimetus o mai";;
+"6") echo "Juuni kuu on tulekul";;
+"7") echo "Juulikuus lumi on maas";;
+"8") echo "Tegemist on augusti kuuga";;
+"9") echo "Tegemist on septembri kuuga";;
+"10") echo "See on oktoobri kuu";;
+"11") echo "Tegemist on novembri kuuga";;
+"12") echo "See on detsembri kuu";;
+esac
+#
+#lõpp
