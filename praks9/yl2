@@ -1,0 +1,18 @@
+#!/bin/bash
+#Uuuendus kuur yl1
+#
+echo -n "Tervist! Sisestage  ridade arv: "
+read rida
+echo -n "Tervist! Nüüd sisestage kindel tärnide arv: "
+read tarn
+for (( i = 1; i <= rida; i++ ))
+do
+echo -n "$i "
+for (( j = 1; j <= tarn;j++))
+do
+echo -n "*"
+done
+echo " "
+done
+#
+#skripti lõpp
